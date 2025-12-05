@@ -33,6 +33,8 @@ def transform(p: Page):
                 w.p({}, [w.Content(active or "")]),
             ],
         ),
+        w.div({"class": '"bg"', "id": '"bg1"'}, [w.Content(" ")]),
+        w.div({"class": '"bg"', "id": '"bg2"'}, [w.Content(" ")]),
         w.inp({"type": '"checkbox"', "id": '"expand-toggle"'}),
         w.span(
             {"class": '"triangle"'}, [w.Content(" ")]
@@ -113,7 +115,7 @@ async def trav(origin=blogPath):
         if id is None or pos is None:
             continue
 
-        outPath = os.path.join("/static", os.path.basename(file))[:-3] + ".html"
+        outPath = os.path.basename(file)[:-3] + ".html"
 
         setNth(top, int(pos), (id, outPath))
 

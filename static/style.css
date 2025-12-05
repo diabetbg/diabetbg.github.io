@@ -122,7 +122,8 @@ figure>img {
 }
 
 .topnav {
-    border-radius: 0 0 .5em .5em;
+    /* gogi predpochita bez radius ama tbh men mi xaresva radiusa */
+    /* border-radius: 0 0 .5em .5em; */
     z-index: 101;
     font-size: 1.2em;
     background-color: var(--background);
@@ -227,6 +228,7 @@ figure>img {
 }
 
 abbr[title] {
+    color: var(--primary);
     position: relative;
     text-decoration: underline dotted;
     z-index: 0;
@@ -258,4 +260,31 @@ abbr[title]:focus::after {
     to {
         opacity: .9;
     }
+}
+
+/* i generated these with https: //svgwave.in/ and then converted them to url-encoded images with
+https://yoksel.github.io/url-encoder/ 
+i also added some side padding in inkscape*/
+
+#bg1 {
+    left: 0;
+    background-position: left;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='1052.748' height='3645' viewBox='0 0 1052.748 3645'%3E%3Cpath d='M 2.2316271e-8,0 H 450 c 42.29665,203.4689 84.5933,406.9376 75,660.6562 -9.5933,253.7184 -71.07656,557.6864 -91,840.375 -19.92344,282.6885 1.71292,544.0976 17,744.1875 15.28708,200.0898 24.22488,338.8604 23,561.9375 -1.22488,223.0771 -12.61244,530.4603 -24,837.8438 H 2.2316271e-8 Z' stroke='none' style='fill:%23cc3333;fill-opacity:1' /%3E%3C/svg%3E");
+}
+
+#bg2 {
+    left: calc(50vw + 30em);
+    background-position: right;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='1052.748' height='3645' id='svg' viewBox='0 0 1052.748 3645'%3E%3Cpath d='m 1052.6719,3645 h -250 c -31.0239,-176.6787 -62.0478,-353.3575 -75,-610.0312 -12.95214,-256.6738 -7.83253,-593.3419 3,-842.9063 10.8325,-249.5643 27.378,-412.0245 30,-663.1875 2.622,-251.163 -8.6794,-591.0287 -4,-860.625 4.6794,-269.5963 25.3397,-468.9231 46,-668.25 h 250 z' stroke='none' style='fill:%23ff990f;fill-opacity:1' /%3E%3C/svg%3E");
+}
+
+.bg {
+    padding: 0;
+    position: fixed;
+    z-index: -100;
+    top: 0em;
+    height: 100vh;
+    width: calc(50vw - 30em);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
