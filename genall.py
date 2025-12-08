@@ -87,7 +87,7 @@ async def trav(origin=blogPath):
         if id is None or pos is None:
             continue
 
-        outPath = os.path.join("/static", os.path.basename(file))[:-3] + ".html"
+        outPath = os.path.join(os.path.basename(file))[:-3] + ".html"
 
         setNth(top, int(pos), (id, outPath))
 
